@@ -1,0 +1,30 @@
+services:
+    client:
+        image: centos:7
+        container_name: client
+        tty: true
+        networks:
+          - my_net
+
+    web:
+        image: nginx:latest
+        container_name: web
+        ports:
+          - "8000:80"
+        volumes:
+          - web_vol:/tmp
+        networks:
+          - my_net
+          
+
+        
+
+
+
+volumes:~
+    web_vol:
+
+networks:
+    my_net:
+
+
