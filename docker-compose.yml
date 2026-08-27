@@ -21,7 +21,7 @@ services:
 
 
 
-volumes:~
+volumes:
     web_vol:
 
 networks:
