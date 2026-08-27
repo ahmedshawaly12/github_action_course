@@ -1,0 +1,20 @@
+name: on_push_code
+
+on:
+    push:
+        branches:
+          - main
+
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: list the files
+            run: ls 
+
+          - name: Print a Welcome Message
+            run: echo "welcome to our first Repo"
+
+
+
