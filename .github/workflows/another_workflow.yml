@@ -1,0 +1,23 @@
+on:
+    push:
+        branches:
+          - main
+        
+        paths:
+          - "src/**"
+
+
+jobs:
+    job_1:
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: checkout the code
+            uses: actions/checkout@v7
+
+          - name: list all the files
+            run: ls -la
+
+          - name: print done msg
+            run: echo "${{ github.job }} done successfully"
+
