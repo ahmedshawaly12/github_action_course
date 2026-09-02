@@ -2,8 +2,9 @@ name: scheduled_workflow
 
 
 on:
+    workflow_dispatch:
     schedule:
-      - cron: "*/5 * * * *"
+      - cron: "*/15 * * * *"
 
 jobs:
     scheduled_job:
