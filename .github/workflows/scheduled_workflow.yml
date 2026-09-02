@@ -1,0 +1,14 @@
+name: scheduled_workflow
+
+
+on:
+    schedule:
+      - cron: "*/5 * * * *"
+
+jobs:
+    scheduled_job:
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: print mesg
+            run: echo "Running the Scheduled task"
