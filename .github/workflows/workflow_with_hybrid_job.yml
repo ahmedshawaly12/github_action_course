@@ -1,0 +1,20 @@
+on:
+    workflow_dispatch:
+
+jobs:
+    hybrid_job:
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: Run a Command in ubuntu VM
+            run: ls -la
+
+          - name: Run command inside alpine container
+            uses: docker://alpine:latest
+            with:
+                entrypoint: "/bin/sh"
+                args: |
+                    -c "ls -la"
+
+          - name: Run Another Command inside the Ubuntu VM
+            run: ls -la
