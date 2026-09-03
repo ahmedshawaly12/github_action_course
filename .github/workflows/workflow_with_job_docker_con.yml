@@ -1,0 +1,16 @@
+on:
+    workflow_dispatch:
+
+
+jobs:
+    dockerized_job:
+        runs-on: ubuntu-latest
+
+        container: node:20
+
+        steps:
+          - run: ls -la
+
+          - run: node --version
+
+          - run: echo "this whole job is inside node.js containers"
